@@ -1,0 +1,150 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --highlight-color: #ffcc00;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a1a;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.nav-links button {
+  font-size: 1rem;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 40px;
+  min-height: 100vh;
+  position: relative;
+  background-color: #1e1e1e;
+}
+
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 3px, transparent 3px) repeat;
+  background-size: 100px 100px;
+  animation: moveBackground 20s linear infinite;
+  z-index: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.text-content {
+  max-width: 600px;
+}
+
+.text-content h1 {
+  font-size: 3rem; /* Smaller font size */
+  margin: 0;
+}
+
+.text-content p {
+  font-size: 1rem; /* Smaller font size */
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px; /* Adds space between the icons */
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 24px; /* Icon size */
+  transition: all 0.3s ease; /* Smooth hover animation */
+}
+.social-icons a:hover {
+  color: var(--highlight-color); /* Highlight color on hover */
+  transform: scale(1.1); /* Zoom effect */
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.email-btn {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.email-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.image-container img {
+  max-width: 450px; /* Slightly larger image */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hand-emoji {
+  display: inline-block;
+  animation: wave 1s infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+}
+100% {
+    background-position: 100% 100%; /* Move background */
+}
+}
+
+ 

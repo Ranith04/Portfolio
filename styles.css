@@ -1,0 +1,162 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --highlight-color: #ffcc00;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars from appearing due to animation */
+  position: relative;
+  height: 100vh; /* Ensure body takes full height */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a1a;
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.nav-links button {
+  font-size: 1rem;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 40px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full height for the hero section */
+}
+
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%) repeat;
+  background-size: 20px 20px; /* Adjust size of dots */
+  animation: moveBackground 10s linear infinite; /* Animation for movement */
+  z-index: 0; /* Ensure it stays behind content */
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%; /* Move background */
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+  color: white; /* Change text color for visibility */
+}
+
+.text-content {
+  max-width: 600px;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--highlight-color);
+  transform: scale(1.1);
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.email-btn {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.email-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.image-container img {
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hand-emoji {
+  display: inline-block;
+  animation: wave 1s infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

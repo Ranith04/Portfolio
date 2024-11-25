@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-react-refresh-wrap": "^2.9.3",
+    "parcel": "^2.9.3",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "staticFiles": {
+    "staticPath": ["public"],
+    "watcherGlob": "**"
+  }
+}

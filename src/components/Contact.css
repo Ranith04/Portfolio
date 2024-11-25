@@ -1,0 +1,73 @@
+/* General container styling */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+}
+
+/* Title styling */
+.contact-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Contact card container */
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual card styling */
+.contact-card {
+  background-color: #000000;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #dddddd;
+}
+
+.contact-card a {
+  font-size: 1rem;
+  color: #4ecca3;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Social icon styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #4ecca3;
+}
